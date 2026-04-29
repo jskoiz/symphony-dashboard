@@ -1,0 +1,266 @@
+{
+  "dashboard": {
+    "title": "Symphony Control",
+    "linearUrl": "https://linear.app",
+    "refreshSeconds": 30
+  },
+  "projects": [
+    {
+      "name": "Atlas Web",
+      "port": 4100,
+      "workflow": "/workspaces/atlas-web/WORKFLOW.md",
+      "branch": "main",
+      "sample": {
+        "running": 2,
+        "retrying": 0,
+        "totalTokens": 42800000,
+        "sessions": [
+          {
+            "issueId": "ENG-104",
+            "title": "Add checkout event audit trail",
+            "linearStatus": "In Progress",
+            "project": "Atlas Web",
+            "remaining": "Implement the event writer and verify webhook replay behavior.",
+            "runtime": "18m 12s",
+            "turns": 4,
+            "state": "In Progress",
+            "lastMessage": "tests passed; preparing final validation notes",
+            "lastEventAt": "2026-04-29T15:38:00Z",
+            "tokens": {
+              "total_tokens": 1205800,
+              "input_tokens": 1170000,
+              "output_tokens": 35800
+            }
+          },
+          {
+            "issueId": "ENG-117",
+            "title": "Tighten account settings empty states",
+            "linearStatus": "In Review",
+            "project": "Atlas Web",
+            "remaining": "Review screenshot evidence and merge after CI completes.",
+            "runtime": "42m 05s",
+            "turns": 7,
+            "state": "Human Review",
+            "lastMessage": "draft PR opened with focused UI changes",
+            "lastEventAt": "2026-04-29T15:34:00Z",
+            "tokens": {
+              "total_tokens": 1840300,
+              "input_tokens": 1760000,
+              "output_tokens": 80300
+            }
+          },
+          {
+            "issueId": "ENG-123",
+            "title": "Split billing summary into stable sections",
+            "linearStatus": "In Progress",
+            "project": "Atlas Web",
+            "remaining": "Keep the visual change scoped and preserve existing analytics events.",
+            "runtime": "23m 41s",
+            "turns": 5,
+            "state": "In Progress",
+            "lastMessage": "component boundaries updated; running focused browser check",
+            "lastEventAt": "2026-04-29T15:32:00Z",
+            "tokens": {
+              "total_tokens": 980200,
+              "input_tokens": 948000,
+              "output_tokens": 32200
+            }
+          },
+          {
+            "issueId": "ENG-129",
+            "title": "Document dashboard rollout checklist",
+            "linearStatus": "Done",
+            "project": "Atlas Web",
+            "remaining": "Completed with docs-only validation.",
+            "runtime": "14m 18s",
+            "turns": 3,
+            "state": "Done",
+            "lastMessage": "checklist merged into release notes",
+            "lastEventAt": "2026-04-29T15:22:00Z",
+            "tokens": {
+              "total_tokens": 520700,
+              "input_tokens": 506000,
+              "output_tokens": 14700
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Beacon API",
+      "port": 4101,
+      "workflow": "/workspaces/beacon-api/WORKFLOW.md",
+      "branch": "develop",
+      "sample": {
+        "running": 1,
+        "retrying": 1,
+        "totalTokens": 57100000,
+        "sessions": [
+          {
+            "issueId": "API-88",
+            "title": "Pin retry budget handling",
+            "linearStatus": "Retrying",
+            "project": "Beacon API",
+            "remaining": "Resolve the failing idempotency regression and rerun the focused suite.",
+            "runtime": "11m 44s",
+            "turns": 3,
+            "state": "Retrying",
+            "lastMessage": "focused test failed on retry budget boundary",
+            "lastEventAt": "2026-04-29T15:39:00Z",
+            "tokens": {
+              "total_tokens": 652400,
+              "input_tokens": 640000,
+              "output_tokens": 12400
+            }
+          },
+          {
+            "issueId": "API-91",
+            "title": "Add contract tests for export filters",
+            "linearStatus": "In Progress",
+            "project": "Beacon API",
+            "remaining": "Add fixtures for empty, partial, and paginated export responses.",
+            "runtime": "27m 19s",
+            "turns": 6,
+            "state": "In Progress",
+            "lastMessage": "fixture generator added; comparing response snapshots",
+            "lastEventAt": "2026-04-29T15:29:00Z",
+            "tokens": {
+              "total_tokens": 1430200,
+              "input_tokens": 1390000,
+              "output_tokens": 40200
+            }
+          },
+          {
+            "issueId": "API-96",
+            "title": "Remove stale queue metric labels",
+            "linearStatus": "In Review",
+            "project": "Beacon API",
+            "remaining": "Review the migration note and confirm Grafana panels still resolve.",
+            "runtime": "51m 09s",
+            "turns": 8,
+            "state": "Human Review",
+            "lastMessage": "PR is ready with compatibility aliases preserved",
+            "lastEventAt": "2026-04-29T15:19:00Z",
+            "tokens": {
+              "total_tokens": 2218800,
+              "input_tokens": 2130000,
+              "output_tokens": 88800
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Northstar iOS",
+      "port": 4102,
+      "workflow": "/workspaces/northstar-ios/WORKFLOW.md",
+      "branch": "main",
+      "sample": {
+        "running": 1,
+        "retrying": 0,
+        "totalTokens": 21400000,
+        "sessions": [
+          {
+            "issueId": "IOS-42",
+            "title": "Reduce onboarding view invalidations",
+            "linearStatus": "In Progress",
+            "project": "Northstar iOS",
+            "remaining": "Keep the refactor scoped and verify the simulator smoke path.",
+            "runtime": "7m 03s",
+            "turns": 2,
+            "state": "In Progress",
+            "lastMessage": "profiling trace captured; applying local view split",
+            "lastEventAt": "2026-04-29T15:37:00Z",
+            "tokens": {
+              "total_tokens": 430100,
+              "input_tokens": 421000,
+              "output_tokens": 9100
+            }
+          },
+          {
+            "issueId": "IOS-47",
+            "title": "Add launch smoke test fixture",
+            "linearStatus": "In Progress",
+            "project": "Northstar iOS",
+            "remaining": "Use the existing simulator target and avoid broad test harness changes.",
+            "runtime": "33m 48s",
+            "turns": 5,
+            "state": "In Progress",
+            "lastMessage": "simulator run passed; checking generated artifacts",
+            "lastEventAt": "2026-04-29T15:26:00Z",
+            "tokens": {
+              "total_tokens": 1180400,
+              "input_tokens": 1141000,
+              "output_tokens": 39400
+            }
+          },
+          {
+            "issueId": "IOS-51",
+            "title": "Polish settings sheet keyboard behavior",
+            "linearStatus": "Todo",
+            "project": "Northstar iOS",
+            "remaining": "Waiting for an available agent slot.",
+            "runtime": "n/a",
+            "turns": 0,
+            "state": "Queued",
+            "lastMessage": "queued behind active simulator work",
+            "lastEventAt": "2026-04-29T15:15:00Z",
+            "tokens": {
+              "total_tokens": 0,
+              "input_tokens": 0,
+              "output_tokens": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Harbor Docs",
+      "port": 4103,
+      "workflow": "/workspaces/harbor-docs/WORKFLOW.md",
+      "branch": "main",
+      "sample": {
+        "running": 1,
+        "retrying": 0,
+        "totalTokens": 9300000,
+        "sessions": [
+          {
+            "issueId": "DOC-18",
+            "title": "Refresh operator quickstart",
+            "linearStatus": "In Progress",
+            "project": "Harbor Docs",
+            "remaining": "Verify all commands use the current package names.",
+            "runtime": "9m 52s",
+            "turns": 2,
+            "state": "In Progress",
+            "lastMessage": "README examples updated; checking links",
+            "lastEventAt": "2026-04-29T15:30:00Z",
+            "tokens": {
+              "total_tokens": 338900,
+              "input_tokens": 329000,
+              "output_tokens": 9900
+            }
+          },
+          {
+            "issueId": "DOC-22",
+            "title": "Add troubleshooting section for offline workers",
+            "linearStatus": "In Review",
+            "project": "Harbor Docs",
+            "remaining": "Confirm screenshots do not include private workspace paths.",
+            "runtime": "37m 11s",
+            "turns": 6,
+            "state": "Human Review",
+            "lastMessage": "review requested after screenshot refresh",
+            "lastEventAt": "2026-04-29T15:21:00Z",
+            "tokens": {
+              "total_tokens": 907500,
+              "input_tokens": 872000,
+              "output_tokens": 35500
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "issues": {}
+}

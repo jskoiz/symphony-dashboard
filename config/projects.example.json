@@ -1,0 +1,30 @@
+{
+  "dashboard": {
+    "title": "Symphony Control",
+    "linearUrl": "https://linear.app",
+    "refreshSeconds": 30
+  },
+  "projects": [
+    {
+      "name": "Example App",
+      "port": 4000,
+      "workflow": "/path/to/your/repo/WORKFLOW.md",
+      "branch": "main"
+    },
+    {
+      "name": "Example Service",
+      "url": "http://127.0.0.1:4001",
+      "workflow": "/path/to/another/repo/WORKFLOW.md",
+      "branch": "develop"
+    }
+  ],
+  "issues": {
+    "ABC-123": {
+      "title": "Optional issue title override",
+      "status": "In Progress",
+      "project": "Example App",
+      "url": "https://linear.app/acme/issue/ABC-123/example",
+      "remaining": "Optional short note shown in the queue."
+    }
+  }
+}

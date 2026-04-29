@@ -1,0 +1,40 @@
+{
+  "dashboard": {
+    "title": "Symphony Control",
+    "linearUrl": "https://linear.app",
+    "refreshSeconds": 30
+  },
+  "projects": [
+    {
+      "name": "brdg-v2",
+      "port": 4000,
+      "workflow": "/Users/jk/.codex/worktrees/dec2/brdg-v2/WORKFLOW.md",
+      "branch": "main"
+    },
+    {
+      "name": "PausenCheck",
+      "port": 4001,
+      "workflow": "/Users/jk/.codex/worktrees/2a5d/pausencheck/WORKFLOW.md",
+      "branch": "main"
+    },
+    {
+      "name": "TASTEMAP",
+      "port": 4002,
+      "workflow": "/Users/jk/.codex/worktrees/c8c6/TASTEMAP/WORKFLOW.md",
+      "branch": "develop"
+    },
+    {
+      "name": "PORTPOURRI",
+      "port": 4003,
+      "workflow": "/Users/jk/.codex/worktrees/d305/PORTPOURRI/WORKFLOW.md",
+      "branch": "main"
+    },
+    {
+      "name": "MLS-REPORT",
+      "port": 4010,
+      "workflow": "/Users/jk/Documents/Projects/MLS-REPORT/WORKFLOW.md",
+      "branch": "main"
+    }
+  ],
+  "issues": {}
+}
