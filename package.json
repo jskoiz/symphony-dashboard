@@ -12,8 +12,9 @@
     "demo": "npm run demo:watch",
     "demo:watch": "SYMPHONY_DASHBOARD_CONFIG=config/projects.sample.json node --watch --watch-path=src --watch-path=config src/server.mjs",
     "demo:once": "SYMPHONY_DASHBOARD_CONFIG=config/projects.sample.json node src/server.mjs",
+    "build:site": "node scripts/build-site.mjs",
     "status": "node src/status.mjs",
-    "check": "node --check src/server.mjs && node --check src/status.mjs"
+    "check": "node --check src/server.mjs && node --check src/status.mjs && node --check scripts/build-site.mjs"
   },
   "engines": {
     "node": ">=20"

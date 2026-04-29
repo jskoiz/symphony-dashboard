@@ -20,7 +20,7 @@ const sparkSamples = {
   rate: [4, 5, 6, 5, 7, 8, 7, 9, 10, 9, 11, 10],
 };
 
-async function renderDashboard() {
+export async function renderDashboard() {
   const config = await loadConfig();
   const refreshSeconds = Number(config.dashboard.refreshSeconds || 30);
   const snapshots = await Promise.all(config.projects.map((project) => loadProject(project, config.issues)));
@@ -525,17 +525,19 @@ function icon(name) {
   return `<svg class="icon" viewBox="0 0 14 14" aria-hidden="true">${paths[name] || ""}</svg>`;
 }
 
-const server = http.createServer(async (_request, response) => {
-  try {
-    const html = await renderDashboard();
-    response.writeHead(200, { "content-type": "text/html; charset=utf-8", "cache-control": "no-store" });
-    response.end(html);
-  } catch (error) {
-    response.writeHead(500, { "content-type": "text/plain; charset=utf-8" });
-    response.end(error.stack || error.message);
-  }
-});
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const server = http.createServer(async (_request, response) => {
+    try {
+      const html = await renderDashboard();
+      response.writeHead(200, { "content-type": "text/html; charset=utf-8", "cache-control": "no-store" });
+      response.end(html);
+    } catch (error) {
+      response.writeHead(500, { "content-type": "text/plain; charset=utf-8" });
+      response.end(error.stack || error.message);
+    }
+  });
 
-server.listen(PORT, () => {
-  console.log(`Symphony dashboard: http://127.0.0.1:${PORT}`);
-});
+  server.listen(PORT, () => {
+    console.log(`Symphony dashboard: http://127.0.0.1:${PORT}`);
+  });
+}
