@@ -1,5 +1,10 @@
 {
   "buildCommand": "npm run build:site",
-  "outputDirectory": "public",
+  "builds": [
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
+    }
+  ],
   "cleanUrls": true
 }
