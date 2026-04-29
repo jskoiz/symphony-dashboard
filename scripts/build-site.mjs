@@ -11,7 +11,10 @@ process.env.SYMPHONY_DASHBOARD_CONFIG = path.join(projectRoot, "config", "projec
 process.env.SYMPHONY_DASHBOARD_PORT ||= "4050";
 
 const html = await renderDashboard();
-const outputPath = path.join(projectRoot, "public", "index.html");
+const publicOutputPath = path.join(projectRoot, "public", "index.html");
+const rootOutputPath = path.join(projectRoot, "index.html");
 
-await fs.writeFile(outputPath, html);
-console.log(`Wrote ${outputPath}`);
+await fs.writeFile(publicOutputPath, html);
+await fs.writeFile(rootOutputPath, html);
+console.log(`Wrote ${publicOutputPath}`);
+console.log(`Wrote ${rootOutputPath}`);
